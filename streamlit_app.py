@@ -48,11 +48,6 @@ try:
 except URLError as e:
    streamlit.error()
 
-
-#stop everything below this
-streamlit.stop()
-import snowflake.connector
-
 streamlit.header("The fruit load list contains:")
 #SnowFlake related functions
 def fruit_load_list():

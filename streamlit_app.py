@@ -42,9 +42,11 @@ try:
       streamlit.error("Please select a fruit to get information.")
   else:
       back_from_function = get_fruityvice_data(fruit_choice)
-      streamlit.dataframe(back_from_function)
-      
-streamlit.header("The fruit load list contains:")
+      streamlit.dataframe(back_from_function)  
+except URLError as e:
+      streamlit.error()
+    
+streamlit.header("The Fruit Load List Contains:)
 #SnowFlake related functions
 def get_fruit_load_list():
   with my_cnx.cursor() as my_cur:
